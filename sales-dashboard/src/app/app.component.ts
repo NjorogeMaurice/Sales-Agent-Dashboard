@@ -177,6 +177,10 @@ this.timetableSignupBar = new Chart('timetableBar', {
     this.asideOpen = !this.asideOpen;
   }
 
+  closeAside() {
+    this.asideOpen = false;
+  }
+
   toggleSchool() {
     this.schoolOpen = true;
   }
