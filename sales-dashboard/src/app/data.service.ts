@@ -20,4 +20,8 @@ export class DataService {
   getTotalVisualizations(){
     return this.http.get('http://localhost:3000/total_visualizations');
   }
+
+  getSchools(){
+    return this.http.get('http://localhost:3000/schools');
+  }
 }

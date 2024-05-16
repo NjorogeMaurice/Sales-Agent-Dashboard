@@ -2,23 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { DataService } from './data.service';
+import { DataService } from '../data.service'
 import Chart from 'chart.js/auto';
 
-
 @Component({
-  selector: 'app-root',
+  selector: 'app-dashboard',
   standalone: true,
   imports: [RouterOutlet,CommonModule,HttpClientModule,RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './dashboard.component.html',
+  styleUrl: './dashboard.component.css'
 })
 
 
-export class AppComponent implements OnInit {
+export class DashboardComponent {
   title = 'sales-dashboard';
-  asideOpen = false;
-  schoolOpen = false;
   top_card: any;
   signup_reviews: any;
   target:any;
@@ -28,11 +25,12 @@ export class AppComponent implements OnInit {
   analyticsSignupBar: any;
   financeSignupBar: any;
   timetableSignupBar: any;
-  schools:any;
+
 
   constructor(private dataService:DataService) { }
-
+ 
   ngOnInit(): void {
+   
     this.dataService.getTopCard().subscribe(response => {
       this.top_card = response;
       // console.log(this.top_card);
@@ -48,10 +46,7 @@ export class AppComponent implements OnInit {
       // console.log(this.target);
     });
 
-    this.dataService.getSchools().subscribe(response => {
-      this.schools = response;
 
-    });
 
     this.analyticsDataPie = new Chart("analyticsChart", {
       type: 'pie', //this denotes tha type of chart
@@ -172,19 +167,5 @@ this.timetableSignupBar = new Chart('timetableBar', {
 
 
 }
-
-  toggleAside() {
-    this.asideOpen = !this.asideOpen;
-  }
-
-  toggleSchool() {
-    this.schoolOpen = true;
-  }
-
-  toggleDashboard() {
-    this.schoolOpen = false;
-  }
-
-
 
 }
