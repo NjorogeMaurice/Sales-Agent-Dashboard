@@ -1,0 +1,22 @@
+{
+    "signup_reviews":{
+        "ZikiAnalytics": {
+            "Primary": 150,
+            "Secondary": 200,
+            "IGCSE": 100
+          },
+          "ZikiFinance": {
+            "Primary": 180,
+            "Secondary": 220,
+            "IGCSE": 120
+          },
+          "ZikiTimetable": {
+            "Primary": 120,
+            "Secondary": 180,
+            "IGCSE": 80
+          }
+    }
+
+    
+  }
+  
