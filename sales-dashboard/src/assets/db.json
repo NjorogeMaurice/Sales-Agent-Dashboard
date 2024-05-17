@@ -1,119 +1,197 @@
 {
-    "top_card_metrics": {
-      "collections": {
-        "total_collections": 1250
-      },
-      "sign_ups": {
-        "total_sign_ups": 350,
-        "product_breakdown": {
-          "Ziki Analytics": 120,
-          "Ziki Finance": 150,
-          "Ziki Timetable": 80
-        }
-      },
-      "total_revenue": {
-        "overall_revenue": 185000,
-        "revenue_per_product": {
-          "Ziki Analytics": 75000,
-          "Ziki Finance": 80000,
-          "Ziki Timetable": 30000
-        }
-      },
-      "bounced_cheques": {
-        "total_bounced_cheques": 10
+  "top_card_metrics": {
+    "collections": {
+      "total_collections": 1250
+    },
+    "sign_ups": {
+      "total_sign_ups": 350,
+      "product_breakdown": {
+        "Ziki Analytics": 120,
+        "Ziki Finance": 150,
+        "Ziki Timetable": 80
       }
     },
-    "signup_reviews":{
-        "ZikiAnalytics": {
-            "Primary": 150,
-            "Secondary": 200,
-            "IGCSE": 100
-          },
-          "ZikiFinance": {
-            "Primary": 180,
-            "Secondary": 220,
-            "IGCSE": 120
-          },
-          "ZikiTimetable": {
-            "Primary": 120,
-            "Secondary": 180,
-            "IGCSE": 80
-          }
-    },
-    "total_visualizations":{
-        "analyticsData": {
-            "labels": ["Target Achieved", "Remaining"],
-            "datasets": [{
-              "data": [100, 50],
-              "backgroundColor": ["#4CAF50", "#E0E0E0"]
-            }]
-          },
-          "financeData": {
-            "labels": ["Target Achieved", "Remaining"],
-            "datasets": [{
-              "data": [120, 30],
-              "backgroundColor": ["#4CAF50", "#E0E0E0"]
-            }]
-          },
-          "timetableData": {
-            "labels": ["Target Achieved", "Remaining"],
-            "datasets": [{
-              "data": [80, 20],
-              "backgroundColor": ["#4CAF50", "#E0E0E0"]
-            }]
-          }
-    },
-    "schools": [
-      {
-        "id": 1,
-        "name": "ABC Primary School",
-        "type": "Primary",
-        "product": "Ziki Analytics",
-        "county": "Nairobi",
-        "registration_date": "2023-01-15",
-        "contact_information": {
-          "email": "info@abcprimary.com",
-          "phone": "+1234567890"
-        },
-        "school_balance": 2500.00,
-        "invoices": [
-          {
-            "invoice_number": "INV001",
-            "invoice_item": "Subscription",
-            "creation_date": "2024-04-01",
-            "due_date": "2024-04-30",
-            "amount": 1000.00,
-            "paid_amount": 500.00,
-            "balance": 500.00,
-            "status": "Pending",
-            "days_until_due": 5
-          }
-        ],
-        "collections": [
-          {
-            "collection_number": "COL001",
-            "invoice_number": "INV001",
-            "date_of_collection": "2024-04-25",
-            "status": "Valid",
-            "amount": 500.00
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "XYZ Secondary School",
-        "type": "Secondary",
-        "product": "Ziki Finance",
-        "county": "Mombasa",
-        "registration_date": "2022-08-20",
-        "contact_information": {
-          "email": "info@xyzsecondary.com",
-          "phone": "+9876543210"
-        },
-        "school_balance": 0.00,
-        "invoices": [],
-        "collections": []
+    "total_revenue": {
+      "overall_revenue": 185000,
+      "revenue_per_product": {
+        "Ziki Analytics": 75000,
+        "Ziki Finance": 80000,
+        "Ziki Timetable": 30000
       }
-    ]
-  }
-  
+    },
+    "bounced_cheques": {
+      "total_bounced_cheques": 10
+    }
+  },
+  "signup_reviews": {
+    "ZikiAnalytics": {
+      "Primary": 150,
+      "Secondary": 200,
+      "IGCSE": 100
+    },
+    "ZikiFinance": {
+      "Primary": 180,
+      "Secondary": 220,
+      "IGCSE": 120
+    },
+    "ZikiTimetable": {
+      "Primary": 120,
+      "Secondary": 180,
+      "IGCSE": 80
+    }
+  },
+  "total_visualizations": {
+    "analyticsData": {
+      "labels": [
+        "Target Achieved",
+        "Remaining"
+      ],
+      "datasets": [
+        {
+          "data": [
+            100,
+            50
+          ],
+          "backgroundColor": [
+            "#4CAF50",
+            "#E0E0E0"
+          ]
+        }
+      ]
+    },
+    "financeData": {
+      "labels": [
+        "Target Achieved",
+        "Remaining"
+      ],
+      "datasets": [
+        {
+          "data": [
+            120,
+            30
+          ],
+          "backgroundColor": [
+            "#4CAF50",
+            "#E0E0E0"
+          ]
+        }
+      ]
+    },
+    "timetableData": {
+      "labels": [
+        "Target Achieved",
+        "Remaining"
+      ],
+      "datasets": [
+        {
+          "data": [
+            80,
+            20
+          ],
+          "backgroundColor": [
+            "#4CAF50",
+            "#E0E0E0"
+          ]
+        }
+      ]
+    }
+  },
+  "schools": [
+    {
+      "id": "3",
+      "name": "BCD Primary School",
+      "type": "Primary",
+      "product": "Zeraki Finance",
+      "county": "Nairobi",
+      "registration_date": "2023-01-15",
+      "contact_information": {
+        "email": "info@bcdprimary.com",
+        "phone": "+1234567890"
+      },
+      "school_balance": 5000,
+      "invoices": [
+        {
+          "invoice_number": "INV001",
+          "invoice_item": "Zeraki Finance",
+          "creation_date": "2024-04-01",
+          "due_date": "2024-05-04",
+          "amount": 1000,
+          "paid_amount": 400,
+          "balance": 600,
+          "status": "Pending",
+          "days_until_due": 5
+        },
+        {
+          "invoice_number": "",
+          "invoice_item": "Zeraki Analytics",
+          "creation_date": "2024-05-14",
+          "due_date": "2024-05-22",
+          "amount": 1,
+          "paid_amount": 2,
+          "balance": 1,
+          "status": "pending",
+          "days_until_due": 1
+        }
+      ],
+      "collections": [
+        {
+          "collection_number": "COL001",
+          "invoice_number": "INV001",
+          "date_of_collection": "2024-04-25",
+          "status": "Valid",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "XYZ Secondary School",
+      "type": "Secondary",
+      "product": "Ziki Finance1",
+      "county": "Mombasa",
+      "registration_date": "2022-08-20",
+      "contact_information": {
+        "email": "info@xyzsecondary.com",
+        "phone": "+9876543210"
+      },
+      "school_balance": 0,
+      "invoices": [],
+      "collections": []
+    },
+    {
+      "id": "1",
+      "name": "BCD Primary School",
+      "type": "Primary",
+      "product": "Zeraki Finance",
+      "county": "Nairobi",
+      "registration_date": "2023-01-15",
+      "contact_information": {
+        "email": "info@bcdprimary.com",
+        "phone": "+1234567890"
+      },
+      "school_balance": 5000,
+      "invoices": [
+        {
+          "invoice_number": "INV001",
+          "invoice_item": "Zeraki Timetable",
+          "creation_date": "2024-04-01",
+          "due_date": "2024-04-30",
+          "amount": 1000,
+          "paid_amount": 5000,
+          "balance": 500,
+          "status": "Pending",
+          "days_until_due": 5
+        }
+      ],
+      "collections": [
+        {
+          "collection_number": "COL001",
+          "invoice_number": "INV001",
+          "date_of_collection": "2024-04-25",
+          "status": "Valid",
+          "amount": 500
+        }
+      ]
+    }
+  ]
+}

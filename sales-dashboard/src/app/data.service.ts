@@ -24,4 +24,24 @@ export class DataService {
   getSchools(){
     return this.http.get('http://localhost:3000/schools');
   }
+
+  updateInvoice(id:any,data:any){
+    fetch('http://localhost:3000/schools/'+id, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+  }
+
+  insertInvoice(id:any,data:any){
+    fetch('http://localhost:3000/schools/'+id, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: data
+    })
+  }
 }

@@ -2,6 +2,7 @@
   
 <!-- component -->
 <div class="bg-white p-1 rounded-md w-full">
+    <input type="text" [(ngModel)]="searchText" placeholder="Search schools...">
 
 		<div>
 			<div class="-mx-1 sm:-mx-4 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -28,21 +29,23 @@
 							</tr>
 						</thead>
 						<tbody>
-              <tr *ngFor="let school of schools">
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <a [routerLink]="['/schools', school.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-blue-500">{{ school.name }}</a>
-                  
-                </td>
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  {{ school.type }}
-                </td>
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <!-- Placeholder for Invoice -->
-                </td>
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                  <!-- Placeholder for Collection -->
-                </td>
-              </tr>
+                            <tr *ngFor="let school of filteredSchools">
+                                <ng-container *ngIf="matchesSearch(school)">
+                                  <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <a [routerLink]="['/schools', school.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-blue-500">{{ school.name }}</a>
+                                  </td>
+                                  <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    {{ school.type }}
+                                  </td>
+                                  <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <!-- Placeholder for Invoice -->
+                                  </td>
+                                  <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                    <!-- Placeholder for Collection -->
+                                  </td>
+                                </ng-container>
+                              </tr>
+                              
 						</tbody>
 					</table>
 					<!-- <div
