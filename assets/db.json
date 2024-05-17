@@ -109,8 +109,28 @@
         "phone": "+1234567890"
       },
       "school_balance": 5000,
-      "invoices": [],
-      "collections": []
+      "invoices": [
+        {
+          "invoice_number": "INV5U8v",
+          "invoice_item": "Zeraki Timetable",
+          "creation_date": "2024-05-05",
+          "due_date": "2024-05-22",
+          "amount": 122,
+          "paid_amount": 1200,
+          "status": "Pending",
+          "balance": 211,
+          "days_until_due": 2
+        }
+      ],
+      "collections": [
+        {
+          "collection_number": "COL190",
+          "invoice_number": "INV5U8v",
+          "date_of_collection": "2024-05-17",
+          "status": "Valid",
+          "amount": 122
+        }
+      ]
     },
     {
       "id": "2",
