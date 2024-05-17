@@ -111,37 +111,42 @@
       "school_balance": 5000,
       "invoices": [
         {
-          "invoice_number": "INV001",
-          "invoice_item": "Zeraki Finance",
-          "creation_date": "2024-04-01",
-          "due_date": "2024-05-04",
-          "amount": 1000,
-          "paid_amount": 400,
-          "balance": 600,
+          "invoice_number": "INV5U8v",
+          "invoice_item": "Zeraki Timetable",
+          "creation_date": "2024-05-05",
+          "due_date": "2024-05-22",
+          "amount": 122,
+          "paid_amount": 1200,
           "status": "Pending",
-          "days_until_due": 5
+          "balance": 2111,
+          "days_until_due": 21
         },
         {
-          "invoice_number": [
-            "INV2"
-          ],
+          "invoice_number": "INVgeFt",
           "invoice_item": "Zeraki Analytics",
-          "creation_date": "2024-05-12",
+          "creation_date": "2024-05-21",
           "due_date": "2024-05-29",
           "amount": 12,
-          "paid_amount": 1,
-          "balance": 11,
-          "status": "pending",
+          "paid_amount": 12,
+          "status": "Complete",
+          "balance": 121,
           "days_until_due": 12
         }
       ],
       "collections": [
         {
-          "collection_number": "COL001",
-          "invoice_number": "INV001",
-          "date_of_collection": "2024-04-25",
+          "collection_number": "COL190",
+          "invoice_number": "INV5U8v",
+          "date_of_collection": "2024-05-17",
           "status": "Valid",
-          "amount": 500
+          "amount": 122
+        },
+        {
+          "collection_number": "COL455",
+          "invoice_number": "INVgeFt",
+          "date_of_collection": "2024-05-17",
+          "status": "Valid",
+          "amount": 12
         }
       ]
     },
@@ -157,70 +162,8 @@
         "phone": "+9876543210"
       },
       "school_balance": 0,
-      "invoices": [
-        {
-          "invoice_number": "INVXPCN",
-          "invoice_item": "Zeraki Analytics",
-          "creation_date": "2024-05-14",
-          "due_date": "2024-05-22",
-          "amount": 123,
-          "paid_amount": 1,
-          "status": "Complete",
-          "balance": 1,
-          "days_until_due": 12
-        }
-      ],
-      "collections": [
-        {
-          "collection_number": "COL849",
-          "invoice_number": "INVXPCN",
-          "date_of_collection": "2024-05-17",
-          "status": "Valid",
-          "amount": 123
-        }
-      ]
-    },
-    {
-      "id": "1",
-      "name": "BCD Primary School",
-      "type": "Primary",
-      "product": "Zeraki Finance",
-      "county": "Nairobi",
-      "registration_date": "2023-01-15",
-      "contact_information": {
-        "email": "info@bcdprimary.com",
-        "phone": "+1234567890"
-      },
-      "school_balance": 5000,
-      "invoices": [
-        {
-          "invoice_number": "INVsqf8",
-          "invoice_item": "Zeraki Timetable",
-          "creation_date": "2024-05-12",
-          "due_date": "2024-05-22",
-          "amount": 100,
-          "paid_amount": 99,
-          "status": "Pending",
-          "balance": 1,
-          "days_until_due": 1
-        }
-      ],
-      "collections": [
-        {
-          "collection_number": "COL001",
-          "invoice_number": "INV001",
-          "date_of_collection": "2024-04-25",
-          "status": "Valid",
-          "amount": 500
-        },
-        {
-          "collection_number": "COL26",
-          "invoice_number": "INVsqf8",
-          "date_of_collection": "2024-05-17",
-          "status": "Valid",
-          "amount": 100
-        }
-      ]
+      "invoices": [],
+      "collections": []
     }
   ]
 }

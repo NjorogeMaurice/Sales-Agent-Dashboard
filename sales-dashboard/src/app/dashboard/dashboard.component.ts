@@ -51,7 +51,7 @@ export class DashboardComponent {
     this.analyticsDataPie = new Chart("analyticsChart", {
       type: 'pie', //this denotes tha type of chart
 
-      data: this.target['analyticsData'],
+      data: this.target['analyticsData']?this.target['analyticsData']:'',
       options: {
         aspectRatio:2.5
       }

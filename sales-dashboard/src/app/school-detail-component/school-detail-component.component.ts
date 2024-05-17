@@ -93,7 +93,8 @@ export class SchoolDetailComponentComponent {
     this.editStates[schoolId] = false;
     console.log("hello")
     await this.dataService.updateInvoice(this.id,this.schoolid)
-    window.location.reload();
+    this.getSchool(this.id);
+    
   }
   
   enableInputForm(){
