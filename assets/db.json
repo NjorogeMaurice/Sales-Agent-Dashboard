@@ -117,9 +117,20 @@
           "due_date": "2024-05-22",
           "amount": 122,
           "paid_amount": 1200,
+          "status": "Pending",
+          "balance": 2111,
+          "days_until_due": 211
+        },
+        {
+          "invoice_number": "INVgeFt",
+          "invoice_item": "Zeraki Analytics",
+          "creation_date": "2024-05-21",
+          "due_date": "2024-05-29",
+          "amount": 12,
+          "paid_amount": 12,
           "status": "Complete",
-          "balance": 211,
-          "days_until_due": 2
+          "balance": 1211,
+          "days_until_due": 121
         }
       ],
       "collections": [
@@ -129,6 +140,13 @@
           "date_of_collection": "2024-05-17",
           "status": "Valid",
           "amount": 122
+        },
+        {
+          "collection_number": "COL455",
+          "invoice_number": "INVgeFt",
+          "date_of_collection": "2024-05-17",
+          "status": "Valid",
+          "amount": 12
         }
       ]
     },
