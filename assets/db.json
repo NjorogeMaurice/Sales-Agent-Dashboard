@@ -117,7 +117,7 @@
           "due_date": "2024-05-22",
           "amount": 122,
           "paid_amount": 1200,
-          "status": "Pending",
+          "status": "Complete",
           "balance": 211,
           "days_until_due": 2
         }
