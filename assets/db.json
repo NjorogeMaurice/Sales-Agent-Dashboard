@@ -122,15 +122,17 @@
           "days_until_due": 5
         },
         {
-          "invoice_number": "",
+          "invoice_number": [
+            "INV2"
+          ],
           "invoice_item": "Zeraki Analytics",
-          "creation_date": "2024-05-14",
-          "due_date": "2024-05-22",
-          "amount": 1,
-          "paid_amount": 2,
-          "balance": 1,
+          "creation_date": "2024-05-12",
+          "due_date": "2024-05-29",
+          "amount": 12,
+          "paid_amount": 1,
+          "balance": 11,
           "status": "pending",
-          "days_until_due": 1
+          "days_until_due": 12
         }
       ],
       "collections": [
@@ -155,8 +157,28 @@
         "phone": "+9876543210"
       },
       "school_balance": 0,
-      "invoices": [],
-      "collections": []
+      "invoices": [
+        {
+          "invoice_number": "INVXPCN",
+          "invoice_item": "Zeraki Analytics",
+          "creation_date": "2024-05-14",
+          "due_date": "2024-05-22",
+          "amount": 123,
+          "paid_amount": 1,
+          "status": "Complete",
+          "balance": 1,
+          "days_until_due": 12
+        }
+      ],
+      "collections": [
+        {
+          "collection_number": "COL849",
+          "invoice_number": "INVXPCN",
+          "date_of_collection": "2024-05-17",
+          "status": "Valid",
+          "amount": 123
+        }
+      ]
     },
     {
       "id": "1",
@@ -172,15 +194,15 @@
       "school_balance": 5000,
       "invoices": [
         {
-          "invoice_number": "INV001",
-          "invoice_item": "Zeraki Timetable",
-          "creation_date": "2024-04-01",
-          "due_date": "2024-04-30",
-          "amount": 1000,
-          "paid_amount": 5000,
-          "balance": 500,
+          "invoice_number": "INVtlzj",
+          "invoice_item": "Zeraki Analytics",
+          "creation_date": "2024-05-05",
+          "due_date": "2024-05-21",
+          "amount": 12,
+          "paid_amount": 11,
           "status": "Pending",
-          "days_until_due": 5
+          "balance": 10,
+          "days_until_due": 12
         }
       ],
       "collections": [
@@ -190,6 +212,13 @@
           "date_of_collection": "2024-04-25",
           "status": "Valid",
           "amount": 500
+        },
+        {
+          "collection_number": "COL385",
+          "invoice_number": "INVtlzj",
+          "date_of_collection": "2024-05-17",
+          "status": "Valid",
+          "amount": 12
         }
       ]
     }
