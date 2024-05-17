@@ -44,4 +44,14 @@ export class DataService {
       body: data
     })
   }
+
+  deleteInvoice(id:any,data:any){
+    fetch('http://localhost:3000/schools/'+id, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body:JSON.stringify(data)
+    })
+  }
 }
