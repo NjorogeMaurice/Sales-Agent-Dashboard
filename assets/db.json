@@ -1,5 +1,6 @@
-{
-  "top_card_metrics": {
+[
+  {
+    "id": "1",
     "collections": {
       "total_collections": 1250
     },
@@ -23,24 +24,26 @@
       "total_bounced_cheques": 10
     }
   },
-  "signup_reviews": {
+  {
+    "id": "2",
     "analyticsData": {
       "Primary": 150,
       "Secondary": 200,
       "IGCSE": 100
     },
-    "ZikiFinance": {
+    "financeData": {
       "Primary": 180,
       "Secondary": 220,
       "IGCSE": 120
     },
-    "ZikiTimetable": {
+    "timetableData": {
       "Primary": 120,
       "Secondary": 180,
       "IGCSE": 80
     }
   },
-  "total_visualizations": {
+  {
+    "id": "3",
     "analyticsData": {
       "labels": [
         "Target Achieved",
@@ -96,96 +99,97 @@
       ]
     }
   },
-  "schools": [
-    {
-      "id": "3",
-      "name": "BCD Primary School",
-      "type": "Primary",
-      "product": "Zeraki Finance",
-      "county": "Nairobi",
-      "registration_date": "2023-01-15",
-      "contact_information": {
-        "email": "info@bcdprimary.com",
-        "phone": "+1234567890"
-      },
-      "school_balance": 5000,
-      "invoices": [
-        {
-          "invoice_number": "INV5U8v",
-          "invoice_item": "Zeraki Timetable",
-          "creation_date": "2024-05-05",
-          "due_date": "2024-05-22",
-          "amount": 122,
-          "paid_amount": 1200,
-          "status": "Pending",
-          "balance": 2111,
-          "days_until_due": 211,
-          "Status": "Pending"
+  {
+    "id": "4",
+    "schools": [
+      {
+        "id": "3",
+        "name": "BCD Primary School",
+        "type": "Primary",
+        "product": "Zeraki Finance",
+        "county": "Nairobi",
+        "registration_date": "2023-01-15",
+        "contact_information": {
+          "email": "info@bcdprimary.com",
+          "phone": "+1234567890"
         },
-        {
-          "invoice_number": "INVqucM",
-          "invoice_item": "Zeraki Analytics",
-          "creation_date": "2024-05-05",
-          "due_date": "2024-05-23",
-          "amount": 1200,
-          "paid_amount": 1100,
-          "status": "Complete",
-          "balance": 100,
-          "days_until_due": 123,
-          "Status": "Complete"
-        }
-      ],
-      "collections": [
-        {
-          "collection_number": "COL190",
-          "invoice_number": "INV5U8v",
-          "date_of_collection": "2024-05-17",
-          "status": "Bounced",
-          "amount": 122
-        },
-        {
-          "collection_number": "COL614",
-          "invoice_number": "INVqucM",
-          "date_of_collection": "2024-05-17",
-          "status": "Valid",
-          "amount": 1200
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "name": "XYZ Secondary School",
-      "type": "Secondary",
-      "product": "Ziki Finance1",
-      "county": "Mombasa",
-      "registration_date": "2022-08-20",
-      "contact_information": {
-        "email": "info@xyzsecondary.com",
-        "phone": "+9876543210"
+        "school_balance": 5000,
+        "invoices": [
+          {
+            "invoice_number": "INVhiQu",
+            "invoice_item": "Zeraki Analytics",
+            "creation_date": "2024-05-13",
+            "due_date": "2024-05-30",
+            "amount": 1000,
+            "paid_amount": 90000,
+            "status": "Complete",
+            "balance": 10,
+            "days_until_due": 12000
+          }
+        ],
+        "collections": [
+          {
+            "collection_number": "COL662",
+            "invoice_number": "INVhiQu",
+            "date_of_collection": "2024-05-18",
+            "status": "Valid",
+            "amount": 1000
+          }
+        ]
       },
-      "school_balance": 0,
-      "invoices": [
-        {
-          "invoice_number": "INV2Ny8",
-          "invoice_item": "Zeraki Analytics",
-          "creation_date": "2024-05-12",
-          "due_date": "2024-05-30",
-          "amount": 123,
-          "paid_amount": 122,
-          "status": "Complete",
-          "balance": 1,
-          "days_until_due": 11
-        }
-      ],
-      "collections": [
-        {
-          "collection_number": "COL849",
-          "invoice_number": "INV2Ny8",
-          "date_of_collection": "2024-05-17",
-          "status": "Valid",
-          "amount": 123
-        }
-      ]
-    }
-  ]
-}
+      {
+        "id": "2",
+        "name": "XYZ Secondary School",
+        "type": "Secondary",
+        "product": "Ziki Finance1",
+        "county": "Mombasa",
+        "registration_date": "2022-08-20",
+        "contact_information": {
+          "email": "info@xyzsecondary.com",
+          "phone": "+9876543210"
+        },
+        "school_balance": 0,
+        "invoices": [
+          {
+            "invoice_number": "INV2Ny8",
+            "invoice_item": "Zeraki Analytics",
+            "creation_date": "2024-05-12",
+            "due_date": "2024-05-30",
+            "amount": 123,
+            "paid_amount": 122,
+            "status": "Complete",
+            "balance": 100,
+            "days_until_due": 112
+          },
+          {
+            "invoice_number": "INVy682",
+            "invoice_item": "Zeraki Analytics",
+            "creation_date": "2024-05-05",
+            "due_date": "2024-05-22",
+            "amount": 123,
+            "paid_amount": 123,
+            "status": "Complete",
+            "balance": 123,
+            "days_until_due": 123
+          }
+        ],
+        "collections": [
+          {
+            "collection_number": "COL849",
+            "invoice_number": "INV2Ny8",
+            "date_of_collection": "2024-05-17",
+            "status": "Bounced",
+            "amount": 123
+          },
+          {
+            "collection_number": "COL822",
+            "invoice_number": "INVy682",
+            "date_of_collection": "2024-05-18",
+            "status": "Valid",
+            "amount": 123
+          }
+        ]
+      }
+    ]
+  }
+]
