@@ -54,7 +54,7 @@ ng serve
 
 ## Deployment
 
-This project was deployed on Vercel.
+This project was deployed on Vercel. [Here](https://sales-dashboard-nine.vercel.app/) is the link to the live demo
 
 To deploy this project on Vercel, follow these steps:
 
