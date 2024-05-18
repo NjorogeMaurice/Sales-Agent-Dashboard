@@ -24,7 +24,7 @@
     }
   },
   "signup_reviews": {
-    "ZikiAnalytics": {
+    "analyticsData": {
       "Primary": 150,
       "Secondary": 200,
       "IGCSE": 100
@@ -119,18 +119,20 @@
           "paid_amount": 1200,
           "status": "Pending",
           "balance": 2111,
-          "days_until_due": 211
+          "days_until_due": 211,
+          "Status": "Pending"
         },
         {
-          "invoice_number": "INVgeFt",
+          "invoice_number": "INVqucM",
           "invoice_item": "Zeraki Analytics",
-          "creation_date": "2024-05-21",
-          "due_date": "2024-05-29",
-          "amount": 12,
-          "paid_amount": 12,
+          "creation_date": "2024-05-05",
+          "due_date": "2024-05-23",
+          "amount": 1200,
+          "paid_amount": 1100,
           "status": "Complete",
-          "balance": 1211,
-          "days_until_due": 121
+          "balance": 100,
+          "days_until_due": 123,
+          "Status": "Complete"
         }
       ],
       "collections": [
@@ -138,15 +140,15 @@
           "collection_number": "COL190",
           "invoice_number": "INV5U8v",
           "date_of_collection": "2024-05-17",
-          "status": "Valid",
+          "status": "Bounced",
           "amount": 122
         },
         {
-          "collection_number": "COL455",
-          "invoice_number": "INVgeFt",
+          "collection_number": "COL614",
+          "invoice_number": "INVqucM",
           "date_of_collection": "2024-05-17",
           "status": "Valid",
-          "amount": 12
+          "amount": 1200
         }
       ]
     },
@@ -162,8 +164,28 @@
         "phone": "+9876543210"
       },
       "school_balance": 0,
-      "invoices": [],
-      "collections": []
+      "invoices": [
+        {
+          "invoice_number": "INV2Ny8",
+          "invoice_item": "Zeraki Analytics",
+          "creation_date": "2024-05-12",
+          "due_date": "2024-05-30",
+          "amount": 123,
+          "paid_amount": 122,
+          "status": "Complete",
+          "balance": 1,
+          "days_until_due": 11
+        }
+      ],
+      "collections": [
+        {
+          "collection_number": "COL849",
+          "invoice_number": "INV2Ny8",
+          "date_of_collection": "2024-05-17",
+          "status": "Valid",
+          "amount": 123
+        }
+      ]
     }
   ]
 }
