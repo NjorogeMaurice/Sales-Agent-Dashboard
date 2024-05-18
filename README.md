@@ -78,6 +78,8 @@ This command will create a dist/ directory with your production build.
 vercel
 ```
 
+Follow the prompts to configure your project. Once the deployment is complete, Vercel will provide you with a live URL for your application.
+
 ## Additional Resources
 
 - [Angular Documentation](https://angular.io/docs)
