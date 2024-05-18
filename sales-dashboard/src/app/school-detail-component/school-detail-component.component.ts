@@ -24,6 +24,7 @@ export class SchoolDetailComponentComponent {
   newInvoiceNumber = '';
   deleteInvoiceNumber:any;
   deleteForm = false;
+  all_schools:any;
 
 
 
@@ -32,11 +33,12 @@ export class SchoolDetailComponentComponent {
 
  
 
-  ngOnInit(): void {
+ngOnInit(): void {
     this.route.params.subscribe(async params => {
       const id = +params['id'];
       if (!isNaN(id)) {
-        await this.getSchool(id);
+        this.getSchool(id);
+        console.log(this.schoolid)
         
       } else {
         // Handle the case where id is not a valid number
@@ -69,8 +71,9 @@ export class SchoolDetailComponentComponent {
   }
 
   getSchool(id: number): void {
-  this.dataService.getSchools().subscribe(response=>{
-      this.schools=response;
+this.dataService.getSchools().subscribe((response: any)=>{
+      this.all_schools=response;
+      this.schools = this.all_schools['schools']
       for (var i = 0; i < this.schools.length; i++) {
         if (this.schools[i].id == id) {
           this.id=id
@@ -91,9 +94,8 @@ export class SchoolDetailComponentComponent {
 
   async disableEdit(schoolId: number) {
     this.editStates[schoolId] = false;
-    console.log("hello")
-    await this.dataService.updateInvoice(this.id,this.schoolid)
-    this.getSchool(this.id);
+    await this.dataService.updateInvoice(this.all_schools);
+    await this.updateAndReload();
     
   }
   
@@ -127,10 +129,12 @@ createCollection(invoiceNumber: string, amount: number): any {
   async onSubmit(){
     this.schoolid['collections'].push(this.createCollection(this.invoiceForm.value.invoice_number,this.invoiceForm.value.amount))
     this.schoolid['invoices'].push(this.invoiceForm.value);
-    await this.dataService.updateInvoice(this.id,this.schoolid);
-    window.location.reload();
-   
+    await this.dataService.updateInvoice(this.all_schools);
+    await this.updateAndReload();
+    
   }
+
+ 
 
   cancelInvoiceDeletion(){
     this.deleteForm = false;
@@ -162,14 +166,47 @@ async confirmInvoiceDeletion(invoiceNumber:any){
         }
         this.schoolid['invoices'].splice(index, 1);
          // Return true to indicate successful removal
-        await this.dataService.deleteInvoice(this.id,this.schoolid);
-        window.location.reload();
+        await this.dataService.deleteInvoice(this.id, this.all_schools);
+        await this.updateAndReload();
     }
     else{
       alert(false);
       window.location.reload();
     
     }
+}
+
+async updateCollectionStatus(invoiceNumber:any,collectionStatus:any){
+  // Check for corresponding invoice
+  const index = this.schoolid['invoices'].findIndex((invoice: { invoice_number: any; }) => invoice.invoice_number === invoiceNumber);
+  if (index !== -1) {
+    // update the status of the invoice
+    this.schoolid['invoices'][index]['status']=collectionStatus=='Valid'? 'Pending':'Complete';
+     // Find the index of the corresponding collection in the collections array
+     const collectionIndex = this.schoolid['collections'].findIndex((collection: any) => collection.invoice_number === invoiceNumber);
+     if (collectionIndex !== -1) {
+      // update status of the collection
+      this.schoolid['collections'][index]['status']=collectionStatus=='Valid'? 'Bounced':'Valid';
+    }
+    this.dataService.deleteInvoice(this.id, this.all_schools);
+    await this.updateAndReload();
+  }
+}
+
+checkCollectionStatus(collectionStatus:any){
+  return collectionStatus=='Valid'? 'Bounced':'Valid';
+}
+
+async updateAndReload() {
+  try {
+    this.getSchool(this.id);
+    // Wait for a short delay to ensure the update is processed (optional)
+    await new Promise(resolve => setTimeout(resolve, 500));
+    window.location.reload();
+  } catch (error) {
+    console.error('Error updating invoice:', error);
+    // Handle errors accordingly
+  }
 }
    
   

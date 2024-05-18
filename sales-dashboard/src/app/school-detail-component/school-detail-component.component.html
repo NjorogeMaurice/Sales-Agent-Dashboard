@@ -58,7 +58,7 @@
 <button [hidden]="!inputData" (click)="disableInputForm()" class="text-white bg-green-600 p-3">Close Form</button>
 <div [hidden]="inputData" class="h-full bg-white p-1">
 <div  class="flex flex-wrap -mx-4">
-    <div *ngFor="let school of schoolid?.invoices" class="w-full md:w-1/2 lg:w-1/3 px-4">
+    <div *ngFor="let school of schoolid?.invoices" class="w-full lg:w-1/3 px-4">
         
        <div
           class="
@@ -85,7 +85,7 @@
                     </td>
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.invoice_item}}</p>
-                        <select [hidden]="!edit"[ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" class="border-1 bg-transparent">
+                        <select [(ngModel)]="school.invoice_item" [hidden]="!edit"[ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" class="border bg-gray-200 w-full rounded-xl p-1">
                             <!-- Add options for selectable items -->
                             <option selected value="Zeraki Finance">Zeraki Finance</option>
                             <option value="Zeraki Analytics">Zeraki Analytics</option>
@@ -103,7 +103,7 @@
                     </td>
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.creation_date}}</p>
-                        <input type="date" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.creation_date" class="border-0 bg-transparent" />
+                        <input type="date" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.creation_date" class="border bg-gray-200 w-full rounded-xl p-1" />
                     </td>
                 </tr>
 
@@ -114,7 +114,7 @@
                     </td>
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.due_date}}</p>
-                        <input type="date" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.due_date" class="border-0 bg-transparent" />
+                        <input type="date" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.due_date" class="border bg-gray-200 w-full rounded-xl p-1" />
                     </td>
                 </tr>
 
@@ -125,7 +125,7 @@
                     </td>
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.amount}}</p>
-                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.amount"class="border-0 bg-transparent" />
+                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.amount"class="border bg-gray-200 w-full rounded-xl p-1" />
                     </td>
                 </tr>
 
@@ -136,7 +136,7 @@
                     </td>
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.paid_amount}}</p>
-                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.paid_amount" class="border-0 bg-transparent" />
+                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.paid_amount" class="border bg-gray-200 w-full rounded-xl p-1" />
                     </td>
                 </tr>
 
@@ -147,7 +147,7 @@
                     </td>
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.balance}}</p>
-                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.balance" class="border-0 bg-transparent" />
+                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.balance" class="border bg-gray-200 w-full rounded-xl p-1" />
                     </td>
                 </tr>
 
@@ -159,8 +159,8 @@
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.status}}</p>
                         
-                        <select hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.status" class="border-0 bg-transparent">
-                            <option selected value="Pending">Pending</option>
+                        <select hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.status" class="border bg-gray-200 w-full rounded-xl p-1">
+                            <option value="Pending">Pending</option>
                             <option value="Complete">Complete</option>
                           
                            
@@ -175,7 +175,7 @@
                     </td>
                     <td>
                         <p [ngClass]="{'block': !editStates[school.invoice_number], 'hidden': editStates[school.invoice_number]}">{{school.days_until_due}}</p>
-                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.days_until_due"class="border-0 bg-transparent" />
+                        <input type="number" hidden [ngClass]="{'block': editStates[school.invoice_number], 'hidden': !editStates[school.invoice_number]}" [(ngModel)]="school.days_until_due"class="border bg-gray-200 w-full rounded-xl p-1" />
                     </td>
                 </tr>
             </tbody>
@@ -223,7 +223,7 @@
 <div [hidden]="!inputData" class="h-full bg-white p-1">
 
     <div  class="flex flex-wrap -mx-4">
-        <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()" class="w-full md:w-1/2 lg:w-1/3 px-4">
+        <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()" class="w-full lg:w-1/3 px-4">
             
            <div
               class="
@@ -250,7 +250,7 @@
                         </td>
                         <td>
                            
-                            <select required formControlName="invoice_item" class="border-1 bg-transparent">
+                            <select required formControlName="invoice_item" class="border bg-gray-200 w-full rounded-xl p-1">
                                 <!-- Add options for selectable items -->
                                 <option selected value="Zeraki Finance">Zeraki Finance</option>
                                 <option value="Zeraki Analytics">Zeraki Analytics</option>
@@ -268,7 +268,7 @@
                         </td>
                         <td>
 
-                            <input required type="date" formControlName="creation_date" class="border-0 bg-transparent" />
+                            <input required type="date" formControlName="creation_date" class="border bg-gray-200 w-full rounded-xl p-1" />
                         </td>
                     </tr>
 
@@ -279,7 +279,7 @@
                         </td>
                         <td>
                             
-                            <input required type="date" formControlName="due_date" class="border-0 bg-transparent" />
+                            <input required type="date" formControlName="due_date" class="border bg-gray-200 w-full rounded-xl p-1" />
                         </td>
                     </tr>
     
@@ -290,7 +290,7 @@
                         </td>
                         <td>
 
-                            <input required type="number" formControlName="amount" class="border-0 bg-transparent" />
+                            <input required type="number" formControlName="amount" class="border bg-gray-200 w-full rounded-xl p-1" />
                         </td>
                     </tr>
     
@@ -301,7 +301,7 @@
                         </td>
                         <td>
                             
-                            <input required type="number" formControlName="paid_amount" class="border-0 bg-transparent" />
+                            <input required type="number" formControlName="paid_amount" class="border bg-gray-200 w-full rounded-xl p-1" />
                         </td>
                     </tr>
     
@@ -311,7 +311,7 @@
                             
                         </td>
                         <td>
-                            <input required type="number" formControlName="balance" class="border-0 bg-transparent" />
+                            <input required type="number" formControlName="balance" class="border bg-gray-200 w-full rounded-xl p-1" />
                         </td>
                     </tr>
     
@@ -322,7 +322,7 @@
                         </td>
                         <td>
                             
-                            <select required formControlName="status" required  class="border-1 bg-transparent">
+                            <select required formControlName="status" required  class="border bg-gray-200 w-full rounded-xl p-1">
                                
                                 <option selected value="Pending">Pending</option>
                                 <option value="Complete">Complete</option>
@@ -339,7 +339,7 @@
                         </td>
                         <td>
                            
-                            <input required type="number" formControlName="days_until_due" class="border-0 bg-transparent" />
+                            <input required type="number" formControlName="days_until_due" class="border bg-gray-200 w-full rounded-xl p-1" />
                         </td>
                     </tr>
     
@@ -365,7 +365,7 @@
 <div class="h-full bg-white p-1">
 
 <div class="flex flex-wrap -mx-4">
-    <div *ngFor="let school of schoolid?.collections" class="w-full md:w-1/2 lg:w-1/3 px-4">
+    <div *ngFor="let school of schoolid?.collections" class="w-full lg:w-1/3 px-4">
        <div
           class="
           p-10
@@ -426,10 +426,14 @@
 
             </tbody>
           </table>
-          <p class="text-body-color">
-             
-          </p>
+         
+          <div class="mt-5">
+            <button [ngClass]="{'bg-red-500': school.status=='Valid', 'bg-green-500': school.status=='Bounced'}" class="text-white p-3" (click)="updateCollectionStatus(school.invoice_number,school.status)">Mark it as {{checkCollectionStatus(school.status)}}</button>
+           </div>
+
        </div>
+
+
     </div>
 
  </div>

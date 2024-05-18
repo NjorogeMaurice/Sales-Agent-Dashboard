@@ -1,32 +1,32 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,provideHttpClient, withFetch } from '@angular/common/http';
 
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: 'any',
 })
 export class DataService {
 
   constructor(private http: HttpClient) { }
 
   getTopCard(){
-    return this.http.get('http://localhost:3000/top_card_metrics');
+    return this.http.get('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/1');
   }
 
   getSignUpReviews(){
-    return this.http.get('http://localhost:3000/signup_reviews');
+    return this.http.get('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/2');
   }
 
   getTotalVisualizations(){
-    return this.http.get('http://localhost:3000/total_visualizations');
+    return this.http.get('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/3');
   }
 
   getSchools(){
-    return this.http.get('http://localhost:3000/schools');
+    return this.http.get('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/4');
   }
 
-  updateInvoice(id:any,data:any){
-    fetch('http://localhost:3000/schools/'+id, {
+  updateInvoice(data:any){
+    fetch('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/4', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -36,17 +36,18 @@ export class DataService {
   }
 
   insertInvoice(id:any,data:any){
-    fetch('http://localhost:3000/schools/'+id, {
+
+    fetch('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/4', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: data
+      body: JSON.stringify(data)
     })
   }
 
   deleteInvoice(id:any,data:any){
-    fetch('http://localhost:3000/schools/'+id, {
+    fetch('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/4', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

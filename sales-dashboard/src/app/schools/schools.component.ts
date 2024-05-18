@@ -17,15 +17,21 @@ import { FormsModule } from '@angular/forms';
 })
 export class SchoolsComponent implements OnInit {
   schools:any;
-searchText: any;
+searchText="";
+loading=true;
 
 
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
     this.dataService.getSchools().subscribe(response => {
+      
       this.schools = response;
-
+      this.schools = this.schools['schools'];
+      this.loading = false; 
+    },error => {
+      console.error('Error fetching schools:', error);
+      this.loading = false;  // Also set loading to false if there's an error
     });
   }
 
@@ -37,6 +43,10 @@ searchText: any;
   }
 
   matchesSearch(school: any): boolean {
+    if(this.searchText.length<1){
+       return this.schools;
+    }
+
     return school.name.toLowerCase().includes(this.searchText.toLowerCase());
   }
 
