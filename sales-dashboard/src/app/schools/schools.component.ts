@@ -35,12 +35,6 @@ loading=true;
     });
   }
 
-  get filteredSchools() {
-
-      return this.schools.filter((response: any) => this.matchesSearch(response));
-    
-    
-  }
 
   matchesSearch(school: any): boolean {
     if(this.searchText.length<1){

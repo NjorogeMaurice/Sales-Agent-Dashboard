@@ -31,11 +31,11 @@
 								</th>
 								<th
 									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									Invoice
+									Invoices
 								</th>
 								<th
 									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									Collection
+									Collections
 								</th>
 							</tr>
 						</thead>
@@ -50,10 +50,10 @@
                                     {{ school.type }}
                                   </td>
                                   <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    
+                                    {{ school.invoices.length}}
                                   </td>
                                   <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-
+                                    {{ school.collections.length}}
                                   </td>
                                 </ng-container>
 								
