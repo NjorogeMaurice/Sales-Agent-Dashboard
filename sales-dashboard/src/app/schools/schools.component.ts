@@ -23,6 +23,7 @@ loading=true;
 
   constructor(private dataService:DataService) { }
 
+  
   ngOnInit(): void {
     this.dataService.getSchools().subscribe(response => {
       
@@ -35,7 +36,7 @@ loading=true;
     });
   }
 
-
+  // search for school by name
   matchesSearch(school: any): boolean {
     if(this.searchText.length<1){
        return this.schools;

@@ -25,7 +25,7 @@ export class DataService {
     return this.http.get('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/4');
   }
 
-  updateInvoice(data:any){
+  async updateInvoice(data:any){
     fetch('https://66483d492bb946cf2f9ff300.mockapi.io/api/data/4', {
       method: 'PUT',
       headers: {

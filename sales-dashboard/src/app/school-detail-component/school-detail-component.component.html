@@ -7,7 +7,7 @@
     src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
     defer
 ></script>
-
+<a [routerLink]="['/schools']" routerLinkActive="active" ariaCurrentWhenActive="page"><img src="assets/back.png" class="w-8"></a>
 <div class="h-full bg-white p-1">
         <div class="my-2 flex border rounded flex-col 2xl:flex-row space-y-4 2xl:space-y-0 2xl:space-x-4">
             <div class="w-full flex flex-col 2xl:w-1/1">
@@ -84,7 +84,7 @@
             <h4 class="font-semibold text-xl text-dark mb-3">
                 {{school.invoice_number}}
              </h4>
-             <p class="text-blue-700 cursor-pointer" (click)="createnewCollection(school.invoice_number,school.amount)">Add Collection</p>
+             <a [routerLink]="['/schools', id,school.invoice_number]" routerLinkActive="active" ariaCurrentWhenActive="page" class="text-blue-500">View Collections</a>
            </div>
           <table  >
             <tbody>
@@ -470,7 +470,7 @@
         </div>
 
 
-<h5 class="text-2xl text-gray-600 font-medium my-5 block">Collections({{schoolid?.collections.length}})</h5>
+<!-- <h5 class="text-2xl text-gray-600 font-medium my-5 block">Collections({{schoolid?.collections.length}})</h5>
 <div class="h-full bg-white p-1">
 
 <div class="flex flex-wrap -mx-4">
@@ -548,7 +548,7 @@
  </div>
 
 
-</div>
+</div> -->
 
 
 
